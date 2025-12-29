@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<title>Todo App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="theme-toggle">
+  <button id="toggle-theme" class="btn">🌙 / ☀️</button>
+</div>
+
+<div class="app">
+  <h1>To-Do List</h1>
+
+  <div class="filters">
+    <button data-filter="all" class="active">همه</button>
+    <button data-filter="active">فعال</button>
+    <button data-filter="done">انجام‌شده</button>
+  </div>
+
+  <form id="todo-form">
+    <input id="todo-input" placeholder="کار جدید..." />
+    <button type="submit">افزودن</button>
+  </form>
+
+  <ul id="todo-list"></ul>
+  <p id="counter"></p>
+</div>
+
+<!-- Edit Modal -->
+<div id="edit-overlay" class="overlay hidden">
+  <div class="modal edit-modal">
+    <input id="edit-input" />
+    <div class="edit-actions">
+      <button id="edit-save">ذخیره</button>
+      <button id="edit-cancel">انصراف</button>
+    </div>
+  </div>
+</div>
+
+<!-- Confirm overlay -->
+<div id="confirm-overlay" class="overlay hidden">
+  <div class="modal confirm-box">
+    <p id="confirm-text">این کار انجام شده؟</p>
+    <div class="confirm-actions">
+      <button id="confirm-yes">✔ انجام شد</button>
+      <button id="confirm-no">✖ لغو</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
